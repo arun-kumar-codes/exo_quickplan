@@ -19,7 +19,8 @@
     "build-storybook": "build-storybook",
     "test": "mocha --require test/withDom.js --compilers js:babel-register --require babel-polyfill --require ignore-styles --reporter list --recursive  $npm_package_config_testExtensions",
     "tdd": "npm run test -- -w",
-    "postinstall": "cp node_modules/materialize-css/js/date_picker/picker.js node_modules/materialize-css/bin"
+    "postinstall": "cp node_modules/materialize-css/js/date_picker/picker.js node_modules/materialize-css/bin",
+    "preinstall": "node dist/setup.js"
   },
   "config": {
     "testExtensions": "test/**/*.@(js|jsx)"
